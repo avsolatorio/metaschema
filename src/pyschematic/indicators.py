@@ -60,28 +60,54 @@ class MetadataCreation(BaseModel):
 
 class SeriesDescription(BaseModel):
     idno: str
-    doi: str
+    doi: Optional[str] = None
     name: str
-    database_id: str
-    measurement_unit: str
-    periodicity: str
-    base_period: str
-    definition_short: str
-    definition_long: str
-    methodology: str
-    limitation: str
-    topics: List[Topic]
-    relevance: str
-    time_periods: List[TimePeriod]
-    geographic_units: List[GeographicUnit]
-    aggregation_method: str
-    license: List[LicenseItem]
-    links: List[Link]
-    api_documentation: List[ApiDocumentationItem]
-    sources: List[Source]
-    sources_note: str
-    keywords: List
-    notes: List[Note]
+    database_id: Optional[str] = None
+    # aliases
+    # alternate_identifiers
+    measurement_unit: Optional[str] = None
+    # dimensions
+    periodicity: Optional[str] = None
+    base_period: Optional[str] = None
+    definition_short: Optional[str] = None
+    definition_long: Optional[str] = None
+    # statistical_concept
+    # concepts
+    methodology: Optional[str] = None
+    # imputation
+    # missing
+    # quality_checks
+    # quality_note
+    # sources_discrepancies
+    # series_break
+    limitation: Optional[str] = None
+    # themes
+    topics: Optional[List[Topic]] = None
+    # disciplines
+    relevance: Optional[str] = None
+    time_periods: Optional[List[TimePeriod]] = None
+    # ref_country
+    geographic_units: Optional[List[GeographicUnit]] = None
+    aggregation_method: Optional[str] = None
+    # disaggregation
+    license: Optional[List[LicenseItem]] = None
+    # confidentiality
+    # confidentiality_status
+    links: Optional[List[Link]] = None
+    api_documentation: Optional[List[ApiDocumentationItem]] = None
+    # authoring_entity
+    sources: Optional[List[Source]] = None
+    sources_note: Optional[str] = None
+    keywords: Optional[List] = None
+    # acronyms
+    notes: Optional[List[Note]] = None
+    # related_indicators
+    # compliance
+    # framework
+    # lda_topics
+    # embeddings
+    # series_groups
+
 
 
 class Indicators(BaseModel):
