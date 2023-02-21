@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, date
+from datetime import date, datetime
 from typing import List, Optional
 
 from pydantic import BaseModel
@@ -53,54 +53,54 @@ class Producer(BaseModel):
 
 
 class MetadataCreation(BaseModel):
-    producers: Optional[List[Producer]] = None
-    prod_date: Optional[date] = None
-    version: Optional[str] = None
+    producers: list[Producer] | None = None
+    prod_date: date | None = None
+    version: str | None = None
 
 
 class SeriesDescription(BaseModel):
     idno: str
-    doi: Optional[str] = None
+    doi: str | None = None
     name: str
-    database_id: Optional[str] = None
+    database_id: str | None = None
     # aliases
     # alternate_identifiers
-    measurement_unit: Optional[str] = None
+    measurement_unit: str | None = None
     # dimensions
-    periodicity: Optional[str] = None
-    base_period: Optional[str] = None
-    definition_short: Optional[str] = None
-    definition_long: Optional[str] = None
+    periodicity: str | None = None
+    base_period: str | None = None
+    definition_short: str | None = None
+    definition_long: str | None = None
     # statistical_concept
     # concepts
-    methodology: Optional[str] = None
+    methodology: str | None = None
     # imputation
     # missing
     # quality_checks
     # quality_note
     # sources_discrepancies
     # series_break
-    limitation: Optional[str] = None
+    limitation: str | None = None
     # themes
-    topics: Optional[List[Topic]] = None
+    topics: list[Topic] | None = None
     # disciplines
-    relevance: Optional[str] = None
-    time_periods: Optional[List[TimePeriod]] = None
+    relevance: str | None = None
+    time_periods: list[TimePeriod] | None = None
     # ref_country
-    geographic_units: Optional[List[GeographicUnit]] = None
-    aggregation_method: Optional[str] = None
+    geographic_units: list[GeographicUnit] | None = None
+    aggregation_method: str | None = None
     # disaggregation
-    license: Optional[List[LicenseItem]] = None
+    license: list[LicenseItem] | None = None
     # confidentiality
     # confidentiality_status
-    links: Optional[List[Link]] = None
-    api_documentation: Optional[List[ApiDocumentationItem]] = None
+    links: list[Link] | None = None
+    api_documentation: list[ApiDocumentationItem] | None = None
     # authoring_entity
-    sources: Optional[List[Source]] = None
-    sources_note: Optional[str] = None
-    keywords: Optional[List] = None
+    sources: list[Source] | None = None
+    sources_note: str | None = None
+    keywords: list | None = None
     # acronyms
-    notes: Optional[List[Note]] = None
+    notes: list[Note] | None = None
     # related_indicators
     # compliance
     # framework
@@ -109,8 +109,7 @@ class SeriesDescription(BaseModel):
     # series_groups
 
 
-
 class Indicators(BaseModel):
-    metadata_creation: Optional[MetadataCreation] = None
+    metadata_creation: MetadataCreation | None = None
     series_description: SeriesDescription
     schematype: str
