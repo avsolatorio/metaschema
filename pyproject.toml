@@ -7,7 +7,7 @@ authors = ["Aivin V. Solatorio <avsolatorio@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8.1"
 pydantic = "^1.10.5"
 
 [tool.poetry.group.dev.dependencies]
