@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, date
 from typing import List, Optional
 
 from pydantic import BaseModel
@@ -54,7 +54,7 @@ class Producer(BaseModel):
 
 class MetadataCreation(BaseModel):
     producers: Optional[List[Producer]] = None
-    prod_date: Optional[datetime.date] = None
+    prod_date: Optional[date] = None
     version: Optional[str] = None
 
 
