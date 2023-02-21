@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -53,13 +53,14 @@ class Producer(BaseModel):
 
 
 class MetadataCreation(BaseModel):
-    producers: List[Producer]
-    prod_date: datetime.date
-    version: str
+    producers: Optional[List[Producer]] = None
+    prod_date: Optional[datetime.date] = None
+    version: Optional[str] = None
 
 
 class SeriesDescription(BaseModel):
     idno: str
+    doi: str
     name: str
     database_id: str
     measurement_unit: str
@@ -84,6 +85,6 @@ class SeriesDescription(BaseModel):
 
 
 class Indicators(BaseModel):
-    metadata_creation: MetadataCreation
+    metadata_creation: Optional[MetadataCreation] = None
     series_description: SeriesDescription
     schematype: str
