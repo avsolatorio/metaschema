@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -44,6 +45,19 @@ class Note(BaseModel):
     note: str
 
 
+class Producer(BaseModel):
+    name: str
+    abbr: str
+    affiliation: str
+    role: str
+
+
+class MetadataCreation(BaseModel):
+    producers: List[Producer]
+    prod_date: datetime.date
+    version: str
+
+
 class SeriesDescription(BaseModel):
     idno: str
     name: str
@@ -70,5 +84,6 @@ class SeriesDescription(BaseModel):
 
 
 class Indicators(BaseModel):
+    metadata_creation: MetadataCreation
     series_description: SeriesDescription
     schematype: str
