@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pyschematic"
+name = "metaschema"
 version = "0.0.1"
 description = "Repository of Pydantic models for metadata schema."
 license = "MIT License"
