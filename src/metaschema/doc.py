@@ -25,11 +25,11 @@ class MetadataInformation(BaseModel):
 
 
 class TitleStatement(BaseModel):
-    idno: str
-    title: str
-    sub_title: str
-    alternate_title: str
-    translated_title: str
+    idno: str = Field(..., description="")
+    title: str = Field(..., description="")
+    sub_title: str = Field(None, description="")
+    alternate_title: str = Field(None, description="")
+    translated_title: str = Field(None, description="")
 
 
 class AuthorIdItem(BaseModel):
