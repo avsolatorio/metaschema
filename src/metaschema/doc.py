@@ -6,14 +6,14 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Producer(BaseModel):
-    name: str
-    abbr: str
-    affiliation: str
-    role: str
+    name: str = Field(None, description="")
+    abbr: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
+    role: str = Field(None, description="")
 
 
 class MetadataInformation(BaseModel):
@@ -183,68 +183,68 @@ class Reproducibility(BaseModel):
 
 
 class DocumentDescription(BaseModel):
-    title_statement: TitleStatement
-    authors: List[Author]
-    editors: List[Editor]
-    date_created: str
-    date_available: str
-    date_modified: str
-    date_published: str
-    identifiers: List[Identifier]
-    type: str
-    status: str
-    description: str
-    toc: str
-    toc_structured: List[TocStructuredItem]
-    abstract: str
-    notes: List[Note]
-    scope: str
-    ref_country: List[RefCountryItem]
-    geographic_units: List[GeographicUnit]
-    bbox: List[BboxItem]
-    spatial_coverage: str
-    temporal_coverage: str
-    publication_frequency: str
-    languages: List[Language]
-    license: List[LicenseItem]
-    bibliographic_citation: List[BibliographicCitationItem]
-    chapter: str
-    edition: str
-    institution: str
-    journal: str
-    volume: str
-    number: str
-    pages: str
-    series: str
-    publisher: str
-    publisher_address: str
-    annote: str
-    booktitle: str
-    crossref: str
-    howpublished: str
-    key: str
-    organization: str
-    url: None
-    translators: List[Translator]
-    contributors: List[Contributor]
-    contacts: List[Contact]
-    rights: str
-    copyright: str
-    usage_terms: str
-    disclaimer: str
-    security_classification: str
-    access_restrictions: str
-    sources: List[Source]
-    data_sources: List[DataSource]
-    keywords: List[Keyword]
-    themes: List[Theme]
-    topics: List[Topic]
-    disciplines: List[Discipline]
-    audience: str
-    mandate: str
-    pricing: str
-    relations: List[Relation]
-    reproducibility: Reproducibility
+    title_statement: TitleStatement = Field(..., description="")
+    authors: List[Author] = Field(None, description="")
+    editors: List[Editor] = Field(None, description="")
+    date_created: str = Field(None, description="")
+    date_available: str = Field(None, description="")
+    date_modified: str = Field(None, description="")
+    date_published: str = Field(None, description="")
+    identifiers: List[Identifier] = Field(None, description="")
+    type: str = Field(None, description="")
+    status: str = Field(None, description="")
+    description: str = Field(None, description="")
+    toc: str = Field(None, description="")
+    toc_structured: List[TocStructuredItem] = Field(None, description="")
+    abstract: str = Field(None, description="")
+    notes: List[Note] = Field(None, description="")
+    scope: str = Field(None, description="")
+    ref_country: List[RefCountryItem] = Field(None, description="")
+    geographic_units: List[GeographicUnit] = Field(None, description="")
+    bbox: List[BboxItem] = Field(None, description="")
+    spatial_coverage: str = Field(None, description="")
+    temporal_coverage: str = Field(None, description="")
+    publication_frequency: str = Field(None, description="")
+    languages: List[Language] = Field(None, description="")
+    license: List[LicenseItem] = Field(None, description="")
+    bibliographic_citation: List[BibliographicCitationItem] = Field(None, description="")
+    chapter: str = Field(None, description="")
+    edition: str = Field(None, description="")
+    institution: str = Field(None, description="")
+    journal: str = Field(None, description="")
+    volume: str = Field(None, description="")
+    number: str = Field(None, description="")
+    pages: str = Field(None, description="")
+    series: str = Field(None, description="")
+    publisher: str = Field(None, description="")
+    publisher_address: str = Field(None, description="")
+    annote: str = Field(None, description="")
+    booktitle: str = Field(None, description="")
+    crossref: str = Field(None, description="")
+    howpublished: str = Field(None, description="")
+    key: str = Field(None, description="")
+    organization: str = Field(None, description="")
+    url: str = Field(None, description="")
+    translators: List[Translator] = Field(None, description="")
+    contributors: List[Contributor] = Field(None, description="")
+    contacts: List[Contact] = Field(None, description="")
+    rights: str = Field(None, description="")
+    copyright: str = Field(None, description="")
+    usage_terms: str = Field(None, description="")
+    disclaimer: str = Field(None, description="")
+    security_classification: str = Field(None, description="")
+    access_restrictions: str = Field(None, description="")
+    sources: List[Source] = Field(None, description="")
+    data_sources: List[DataSource] = Field(None, description="")
+    keywords: List[Keyword] = Field(None, description="")
+    themes: List[Theme] = Field(None, description="")
+    topics: List[Topic] = Field(None, description="")
+    disciplines: List[Discipline] = Field(None, description="")
+    audience: str = Field(None, description="")
+    mandate: str = Field(None, description="")
+    pricing: str = Field(None, description="")
+    relations: List[Relation] = Field(None, description="")
+    reproducibility: Reproducibility = Field(None, description="")
 
 
 class OriginDescription(BaseModel):
