@@ -33,24 +33,24 @@ class TitleStatement(BaseModel):
 
 
 class AuthorIdItem(BaseModel):
-    type: None
-    id: None
+    type: str = Field(None, description="")
+    id: str = Field(None, description="")
 
 
 class Author(BaseModel):
-    first_name: str
-    initial: str
-    last_name: str
-    affiliation: str
-    author_id: List[AuthorIdItem]
-    full_name: str
+    first_name: str = Field(None, description="")
+    initial: str = Field(None, description="")
+    last_name: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
+    author_id: List[AuthorIdItem] = Field(None, description="")
+    full_name: str = Field(None, description="")
 
 
 class Editor(BaseModel):
-    first_name: str
-    initial: str
-    last_name: str
-    affiliation: str
+    first_name: str = Field(None, description="")
+    initial: str = Field(None, description="")
+    last_name: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
 
 
 class Identifier(BaseModel):
