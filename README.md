@@ -12,3 +12,17 @@ The package is available on PyPi:
 ```
 pip install metaschema
 ```
+
+# Notes
+
+Generating the models from the JSON schema. This is done using the `datamodel-codegen`.
+
+First, download the JSON schema from NADA API. For example, for documents (https://ihsn.github.io/nada-api-redoc/catalog-admin/#tag/Documents). Store the JSON schema in `data/examples/doc.json`.
+
+Then, run the following command to generate the models. Note that the `--input-file-type` is `json` and not `jsonschema`
+
+```
+poetry run datamodel-codegen  --input data/examples/doc.json --input-file-type json --output src/metaschema/doc.py
+```
+
+We then change the `Model` to a more explicit name: `DocModel` .
