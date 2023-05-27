@@ -54,132 +54,132 @@ class Editor(BaseModel):
 
 
 class Identifier(BaseModel):
-    type: str
-    identifier: str
+    type: str = Field(None, description="")
+    identifier: str = Field(None, description="")
 
 
 class TocStructuredItem(BaseModel):
-    id: str
-    parent_id: str
-    name: str
+    id: str = Field(None, description="")
+    parent_id: str = Field(None, description="")
+    name: str = Field(..., description="")
 
 
 class Note(BaseModel):
-    note: str
+    note: str = Field(..., description="")
 
 
 class RefCountryItem(BaseModel):
-    name: str
-    code: str
+    name: str = Field(..., description="")
+    code: str = Field(None, description="")
 
 
 class GeographicUnit(BaseModel):
-    name: str
-    code: str
-    type: str
+    name: str = Field(..., description="")
+    code: str = Field(None, description="")
+    type: str = Field(None, description="")
 
 
 class BboxItem(BaseModel):
-    west: str
-    east: str
-    south: str
-    north: str
+    west: str = Field(..., description="")
+    east: str = Field(..., description="")
+    south: str = Field(..., description="")
+    north: str = Field(..., description="")
 
 
 class Language(BaseModel):
-    name: str
-    code: str
+    name: str = Field(None, description="")
+    code: str = Field(None, description="")
 
 
 class LicenseItem(BaseModel):
-    name: str
-    uri: str
+    name: str = Field(..., description="")
+    uri: str = Field(None, description="")
 
 
 class BibliographicCitationItem(BaseModel):
-    style: str
-    citation: str
+    style: str = Field(None, description="")
+    citation: str = Field(None, description="")
 
 
 class Translator(BaseModel):
-    first_name: str
-    initial: str
-    last_name: str
-    affiliation: str
+    first_name: str = Field(None, description="")
+    initial: str = Field(None, description="")
+    last_name: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
 
 
 class Contributor(BaseModel):
-    first_name: str
-    initial: str
-    last_name: str
-    affiliation: str
-    contribution: str
+    first_name: str = Field(None, description="")
+    initial: str = Field(None, description="")
+    last_name: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
+    contribution: str = Field(None, description="")
 
 
 class Contact(BaseModel):
-    name: str
-    role: str
-    affiliation: str
-    email: str
-    telephone: str
-    uri: str
+    name: str = Field(None, description="")
+    role: str = Field(None, description="")
+    affiliation: str = Field(None, description="")
+    email: str = Field(None, description="")
+    telephone: str = Field(None, description="")
+    uri: str = Field(None, description="")
 
 
 class Source(BaseModel):
-    source_origin: str
-    source_char: str
-    source_doc: str
+    source_origin: str = Field(None, description="")
+    source_char: str = Field(None, description="")
+    source_doc: str = Field(None, description="")
 
 
 class DataSource(BaseModel):
-    name: str
-    uri: str
-    note: str
+    name: str = Field(..., description="")
+    uri: str = Field(None, description="")
+    note: str = Field(None, description="")
 
 
 class Keyword(BaseModel):
-    name: str
-    vocabulary: str
-    uri: str
+    name: str = Field(..., description="")
+    vocabulary: str = Field(None, description="")
+    uri: str = Field(None, description="")
 
 
 class Theme(BaseModel):
-    id: str
-    name: str
-    parent_id: str
-    vocabulary: str
-    uri: str
+    id: str = Field(None, description="")
+    name: str = Field(..., description="")
+    parent_id: str = Field(None, description="")
+    vocabulary: str = Field(None, description="")
+    uri: str = Field(None, description="")
 
 
 class Topic(BaseModel):
-    id: str
-    name: str
-    parent_id: str
-    vocabulary: str
-    uri: str
+    id: str = Field(None, description="")
+    name: str = Field(..., description="")
+    parent_id: str = Field(None, description="")
+    vocabulary: str = Field(None, description="")
+    uri: str = Field(None, description="")
 
 
 class Discipline(BaseModel):
-    id: str
-    name: str
-    parent_id: str
-    vocabulary: str
-    uri: str
+    id: str = Field(None, description="")
+    name: str = Field(None, description="")
+    parent_id: str = Field(None, description="")
+    vocabulary: str = Field(None, description="")
+    uri: str = Field(None, description="")
 
 
 class Relation(BaseModel):
-    name: str
-    type: str
+    name: str = Field(None, description="")
+    type: str = Field(None, description="")
 
 
 class Link(BaseModel):
-    uri: str
-    description: str
+    uri: str = Field(None, description="")
+    description: str = Field(None, description="")
 
 
 class Reproducibility(BaseModel):
-    statement: str
-    links: List[Link]
+    statement: str = Field(None, description="")
+    links: List[Link] = Field(None, description="")
 
 
 class DocumentDescription(BaseModel):
