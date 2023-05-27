@@ -1,0 +1,293 @@
+{
+    "repositoryid": "string",
+    "published": 0,
+    "overwrite": "no",
+    "metadata_information": {
+        "title": "string",
+        "idno": "string",
+        "producers": [
+            {
+                "name": "string",
+                "abbr": "string",
+                "affiliation": "string",
+                "role": "string"
+            }
+        ],
+        "production_date": "string",
+        "version": "string"
+    },
+    "document_description": {
+        "title_statement": {
+            "idno": "string",
+            "title": "string",
+            "sub_title": "string",
+            "alternate_title": "string",
+            "translated_title": "string"
+        },
+        "authors": [
+            {
+                "first_name": "string",
+                "initial": "string",
+                "last_name": "string",
+                "affiliation": "string",
+                "author_id": [
+                    {
+                        "type": null,
+                        "id": null
+                    }
+                ],
+                "full_name": "string"
+            }
+        ],
+        "editors": [
+            {
+                "first_name": "string",
+                "initial": "string",
+                "last_name": "string",
+                "affiliation": "string"
+            }
+        ],
+        "date_created": "string",
+        "date_available": "string",
+        "date_modified": "string",
+        "date_published": "string",
+        "identifiers": [
+            {
+                "type": "string",
+                "identifier": "string"
+            }
+        ],
+        "type": "string",
+        "status": "string",
+        "description": "string",
+        "toc": "string",
+        "toc_structured": [
+            {
+                "id": "string",
+                "parent_id": "string",
+                "name": "string"
+            }
+        ],
+        "abstract": "string",
+        "notes": [
+            {
+                "note": "string"
+            }
+        ],
+        "scope": "string",
+        "ref_country": [
+            {
+                "name": "string",
+                "code": "string"
+            }
+        ],
+        "geographic_units": [
+            {
+                "name": "string",
+                "code": "string",
+                "type": "string"
+            }
+        ],
+        "bbox": [
+            {
+                "west": "string",
+                "east": "string",
+                "south": "string",
+                "north": "string"
+            }
+        ],
+        "spatial_coverage": "string",
+        "temporal_coverage": "string",
+        "publication_frequency": "string",
+        "languages": [
+            {
+                "name": "string",
+                "code": "string"
+            }
+        ],
+        "license": [
+            {
+                "name": "string",
+                "uri": "string"
+            }
+        ],
+        "bibliographic_citation": [
+            {
+                "style": "string",
+                "citation": "string"
+            }
+        ],
+        "chapter": "string",
+        "edition": "string",
+        "institution": "string",
+        "journal": "string",
+        "volume": "string",
+        "number": "string",
+        "pages": "string",
+        "series": "string",
+        "publisher": "string",
+        "publisher_address": "string",
+        "annote": "string",
+        "booktitle": "string",
+        "crossref": "string",
+        "howpublished": "string",
+        "key": "string",
+        "organization": "string",
+        "url": null,
+        "translators": [
+            {
+                "first_name": "string",
+                "initial": "string",
+                "last_name": "string",
+                "affiliation": "string"
+            }
+        ],
+        "contributors": [
+            {
+                "first_name": "string",
+                "initial": "string",
+                "last_name": "string",
+                "affiliation": "string",
+                "contribution": "string"
+            }
+        ],
+        "contacts": [
+            {
+                "name": "string",
+                "role": "string",
+                "affiliation": "string",
+                "email": "string",
+                "telephone": "string",
+                "uri": "string"
+            }
+        ],
+        "rights": "string",
+        "copyright": "string",
+        "usage_terms": "string",
+        "disclaimer": "string",
+        "security_classification": "string",
+        "access_restrictions": "string",
+        "sources": [
+            {
+                "source_origin": "string",
+                "source_char": "string",
+                "source_doc": "string"
+            }
+        ],
+        "data_sources": [
+            {
+                "name": "string",
+                "uri": "string",
+                "note": "string"
+            }
+        ],
+        "keywords": [
+            {
+                "name": "string",
+                "vocabulary": "string",
+                "uri": "string"
+            }
+        ],
+        "themes": [
+            {
+                "id": "string",
+                "name": "string",
+                "parent_id": "string",
+                "vocabulary": "string",
+                "uri": "string"
+            }
+        ],
+        "topics": [
+            {
+                "id": "string",
+                "name": "string",
+                "parent_id": "string",
+                "vocabulary": "string",
+                "uri": "string"
+            }
+        ],
+        "disciplines": [
+            {
+                "id": "string",
+                "name": "string",
+                "parent_id": "string",
+                "vocabulary": "string",
+                "uri": "string"
+            }
+        ],
+        "audience": "string",
+        "mandate": "string",
+        "pricing": "string",
+        "relations": [
+            {
+                "name": "string",
+                "type": "isPartOf"
+            }
+        ],
+        "reproducibility": {
+            "statement": "string",
+            "links": [
+                {
+                    "uri": "string",
+                    "description": "string"
+                }
+            ]
+        }
+    },
+    "provenance": [
+        {
+            "origin_description": {
+                "harvest_date": "string",
+                "altered": true,
+                "base_url": "string",
+                "identifier": "string",
+                "date_stamp": "string",
+                "metadata_namespace": "string"
+            }
+        }
+    ],
+    "tags": [
+        {
+            "tag": "string",
+            "tag_group": "string"
+        }
+    ],
+    "lda_topics": [
+        {
+            "model_info": [
+                {
+                    "source": "string",
+                    "author": "string",
+                    "version": "string",
+                    "model_id": "string",
+                    "nb_topics": 0,
+                    "description": "string",
+                    "corpus": "string",
+                    "uri": "string"
+                }
+            ],
+            "topic_description": [
+                {
+                    "topic_id": null,
+                    "topic_score": null,
+                    "topic_label": "string",
+                    "topic_words": [
+                        {
+                            "word": "string",
+                            "word_weight": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "embeddings": [
+        {
+            "id": "string",
+            "description": "string",
+            "date": "string",
+            "vector": null
+        }
+    ],
+    "additional": {}
+}
