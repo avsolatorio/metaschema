@@ -1,3 +1,6 @@
+bump_version:
+	poetry version patch
+
 install:
 	pip install .
 
