@@ -301,13 +301,13 @@ class Embedding(BaseModel):
 
 
 class Model(BaseModel):
-    repositoryid: str
-    published: int
-    overwrite: str
-    metadata_information: MetadataInformation
+    repositoryid: str = None
+    published: int = None
+    overwrite: str = None
+    metadata_information: MetadataInformation = None
     document_description: DocumentDescription
-    provenance: List[ProvenanceItem]
-    tags: List[Tag]
-    lda_topics: List[LdaTopic]
-    embeddings: List[Embedding]
-    additional: Dict[str, Any]
+    provenance: List[ProvenanceItem] = None
+    tags: List[Tag] = None
+    lda_topics: List[LdaTopic] = None
+    embeddings: List[Embedding] = None
+    additional: Dict[str, Any] = None
